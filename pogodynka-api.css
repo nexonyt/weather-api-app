@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-image: linear-gradient(30deg, #21445e, #225b78, #1f7492, #188daa, #11a8c0);
+}
+
+#place-text {
+    color: white;
+    font-size: 20px;
+    margin: 8px;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#header-text { 
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    -moz-animation: fadein .4s; /* Firefox */
+    -webkit-animation: fadein .4s; /* Safari and Chrome */
+    -o-animation: fadein .4s; /* Opera */
+}
+
+.box {
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 350px;
+    -moz-animation: fadein .6s; /* Firefox */
+    -webkit-animation: fadein .6s; /* Safari and Chrome */
+    -o-animation: fadein .6s; /* Opera */
+}
+
+#search-city {
+    font-size: 20px;
+    width: 235px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 8px;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+
+#searching-button {
+    font-size: 20px;
+    width: 150px;
+    height: 35px;
+    margin: 8px;
+    border: none;
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    -o-animation-delay: 4s;
+    -moz-animation: fadein 3s; /* Firefox */
+    -webkit-animation: fadein 3s; /* Safari and Chrome */
+    -o-animation: fadein 3s; /* Opera */
+}
+
+#searching-button:hover {
+    background-color: white;
+    color: black;
+}
+
+.api-coords,
+.api-temp,
+.api-feels-like,
+.api-humidity {
+    color: white;
+}
+
+.problemSpan {
+    color: red;
+    font-weight: bold;
+}
+
+.bottom {
+    padding-top: 20px;
+    width: 100%;
+    height: 100px;
+    display: none;
+}
+
+.left {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.left img {
+    margin-right: 30px;
+    transform: scale(250%);
+}
+
+.middle {
+    opacity: 0;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1%;
+}
+
+.middle-bar-active {
+    opacity: 1;
+}
+
+.right {
+    width: 50%;
+    height: 100%;
+    margin-left: 20px;
+    flex-wrap: nowrap;
+}
+#footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 25px;
+    letter-spacing: .125rem;
+    margin-top: 50px;
+    text-transform: uppercase;
+    transition: letter-spacing 0.5s;
+}
+#footer:hover {
+    transition: letter-spacing 0.5s;
+    letter-spacing: .225rem;
+}
+#footer a {
+    text-decoration: none;
+    color: white;
+}
+
+.animation-box {
+    height: 400px;
+    animation: center-animate 0.5s ease alternate;
+}
+
+.animation-api1 {
+    animation: showup .7s ease-in-out;
+}
+
+.animation-api {
+    animation: showup 1s ease-in-out;
+}
+
+
+@keyframes showup {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes center-animate {
+    0% {
+        transform: scaleY(0.90);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 560px) {
+    .box {
+        width: 90%;
+    }
+    .left {
+        margin-left: 20px;
+    }
+    #search-city::placeholder {
+        text-align: center;
+    }
+    #search-city {
+        text-align: center;
+    }
+     body {
+        font-family: 'Roboto', sans-serif;
+    } 
+}

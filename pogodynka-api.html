@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl_PL">
+<!--  NEXONSTUDIO.PL  -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App - nexonstudio.pl</title>
+    <link rel="stylesheet" href="pogodynka-api.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <p id="header-text">Weather App</p>
+        <div class="box">
+            <p id="place-text">Podaj miejscowość:</p>
+            <input type="text" placeholder="Miejscowość" id="search-city">
+            <span class="problemSpan"></span>
+            <input type="button" value="Sprawdź" id="searching-button">
+            <div class="bottom">
+                <div class="left">
+                </div>
+                <div class="middle">|</div>
+                <div class="right">
+                    <div class="api-temp"></div>
+                    <div class="api-feels-like"></div>
+                    <div class="api-humidity"></div>
+                    <div class="api-coords"></div>
+                    <div class="api-local-time"></div>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+            <h5>Copyright by <a href="https://nexonstudio.pl/">nexonstudio.pl</a></h5>
+        </footer>
+    </div>
+    <script src="pogodynka-api.js"></script>
+</body>
+
+</html>
